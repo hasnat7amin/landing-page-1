@@ -29,12 +29,13 @@
     <link rel="icon" href="assests/illustration.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>StartUp Project 01</title>
-    <py ></py>
+    
   </head>
-  <body >
+  <body>
     <div>
       <section class="navbar_section">
-        <nav class="navbar">
+        <h1>StartUp</h1>
+        <nav class="navbar" id="tohide">
           <ul class="navbar_list">
             <li>
               <a href="#">About me</a>
@@ -48,17 +49,22 @@
           </ul>
           <div class="navbar_buttons">
             <button class="button_outline">Sign Up</button>
-            <button  class="button_inline">Login</button>
+            <button class="button_inline">Login</button>
           </div>
         </nav>
+        <div class="container change" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
       </section>
-      <section>
+      <section class="sec2">
         <div class="home_section">
           <div class="home_sec_details">
-           <h2> Hi I'm full stack <span> Web Developer </span> in Pakistan</h2>
+            <h2>Hi I'm full stack <span> Web Developer </span> in Pakistan</h2>
           </div>
           <div class="home_sec_img">
-            <img src="/assests/illustration.svg" alt="programmer">
+            <img src="/assests/illustration.svg" alt="programmer" />
           </div>
         </div>
       </section>
@@ -79,5 +85,21 @@
     ></script> -->
 
     <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
+    <script>
+      let hide = true;
+      function myFunction(x) {
+        x.classList.toggle("change");
+        if(hide){
+          document.getElementById("tohide").classList.toggle("navbar_hide");
+        }else{
+          document.getElementById("tohide").classList.toggle("navbar");
+          
+          // document.getElementsByClassName(".navbar").style.height = "max-content"
+          // document.getElementsByClassName(".navbar").style.width = "100%";
+    
+        }
+      }
+    </script>
   </body>
 </html>
